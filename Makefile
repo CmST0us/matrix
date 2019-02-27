@@ -12,7 +12,7 @@ RANLIB		= $(CROSS_COMPILE)ranlib
 
 export AS LD CC AR NM STRIP OBJCOPY OBJDUMP RANLIB CROSS_COMPILE
 
-SUBDIRS		= lib demo 
+SUBDIRS		= lib
 TARGET		= subdirs
 PHONY		+= $(TARGET) $(SUBDIRS) %.clean
 
@@ -29,7 +29,6 @@ $(SUBDIRS):
 clean distclean: $(patsubst %, %.clean, $(SUBDIRS))
 
 install:
-	make -C ./demo install 
 	make -C ./lib install
 
 .PHONY: $(PHONY) install clean distclean
