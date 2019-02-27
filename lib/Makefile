@@ -39,8 +39,8 @@ $(SLIB): $(LIBOBJ)
 	$(RANLIB) $@
 	
 install: $(LIB)
-    mkdir -p ../../build/include/libfahw
-    mkdir -p ../../build/lib
+	mkdir -p ../../build/include/libfahw
+	mkdir -p ../../build/lib
 	install ./includes/libfahw*.h ../../build/include/libfahw/
 	install --mode=644 libfahw.so ../../build/lib
 	install --mode=644 libfahw.a ../../build/lib
